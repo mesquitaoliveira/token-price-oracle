@@ -6,7 +6,7 @@ import { RPC_URL } from "../config/constants";
 const provider = new ethers.JsonRpcProvider(RPC_URL);
 
 let priceCache: Record<string, { price: string; timestamp: number }> = {}; // Cache local
-const CACHE_DURATION = 60 * 1000; // 60s
+const CACHE_DURATION = 10 * 1000; // 10s
 
 export async function fetchAllPrices(): Promise<
   Record<
